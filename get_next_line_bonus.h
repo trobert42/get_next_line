@@ -6,7 +6,7 @@
 /*   By: zerudo <zerudo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 19:28:21 by zerudo            #+#    #+#             */
-/*   Updated: 2022/11/09 14:45:58 by trobert          ###   ########.fr       */
+/*   Updated: 2022/02/11 14:43:04 by trobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 420000000000000000000000000000000000000000000000000000000000
+#  define BUFFER_SIZE 42
 # endif
 
 int		is_line(const char *s);

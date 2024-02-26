@@ -6,11 +6,11 @@
 /*   By: zerudo <zerudo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 11:11:39 by zerudo            #+#    #+#             */
-/*   Updated: 2022/04/19 13:12:14 by trobert          ###   ########.fr       */
+/*   Updated: 2022/02/11 14:42:15 by trobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*getline_cutline(char *str, int flag)
 {

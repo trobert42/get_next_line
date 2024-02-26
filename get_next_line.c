@@ -6,7 +6,7 @@
 /*   By: zerudo <zerudo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 11:11:39 by zerudo            #+#    #+#             */
-/*   Updated: 2022/04/19 14:26:24 by trobert          ###   ########.fr       */
+/*   Updated: 2022/02/11 14:42:42 by trobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,5 @@ char	*get_next_line(int fd)
 		return (NULL);
 	line = getline_cutline(stock[fd], 1);
 	stock[fd] = getline_cutline(stock[fd], 2);
-	if (stock[fd] && stock[fd][0] == '\0')
-		free(stock[fd]);
 	return (line);
 }

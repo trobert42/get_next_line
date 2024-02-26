@@ -1,26 +1,21 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: trobert <trobert@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/12 11:11:39 by zerudo            #+#    #+#             */
-/*   Updated: 2022/11/09 14:47:22 by trobert          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "get_next_line.h"
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <sys/fcntl.h>
+#include <fcntl.h>
 #include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include "get_next_line.h"
 
-int	main(void)
-{
-	while (1)
-	{
-		printf("%s", get_next_line(0));
+int main (int ac, char *av[]) {
+	if (ac != 2)
+		return (printf("wrong nb of args\n"), 1);
+	int fd = open(av[1], O_RDONLY);
+	if (fd < 0)
+		return (printf("can't open\n"), 1);
+	char *str;
+	while ((str = get_next_line(fd)) != NULL) {
+		printf("%s \n", str);
+		free(str);
 	}
+	return 0;
 }
-
